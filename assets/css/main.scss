@@ -49,27 +49,62 @@ a { color: var(--color-signal); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 64px;
+  flex-wrap: wrap;
 }
 .wordmark {
   font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-ink);
   text-decoration: none;
 }
 .site-header nav {
   display: flex;
-  gap: 22px;
+  gap: 26px;
 }
 .site-header nav a {
+  position: relative;
+  padding: 8px 2px;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-ink-soft);
   text-decoration: none;
 }
+.site-header nav a::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--color-signal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
 .site-header nav a:hover { color: var(--color-signal); }
+.site-header nav a:hover::after,
+.site-header nav a.active::after { transform: scaleX(1); }
 .site-header nav a.active { color: var(--color-ink); font-weight: 600; }
+
+/* hamburger toggle — hidden on tablet/desktop, shown on phones */
+.nav-toggle { display: none; }
+.nav-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.nav-toggle-btn span {
+  display: block;
+  height: 2px;
+  background: var(--color-ink);
+  border-radius: 1px;
+}
 
 /* hero */
 .hero {
@@ -227,8 +262,24 @@ section .lede {
 .footer-links a:hover { color: var(--color-signal); }
 
 @media (max-width: 640px) {
-  .site-header nav { gap: 14px; }
-  .site-header nav a { font-size: 12px; }
+  .nav-toggle-btn { display: flex; }
+  .site-header .wrap { height: auto; padding: 14px 20px; }
+  .site-header nav {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    order: 3;
+  }
+  .nav-toggle:checked ~ nav { display: flex; }
+  .site-header nav a {
+    padding: 14px 4px;
+    font-size: 16px;
+    border-top: 1px dashed var(--color-line);
+  }
+  .site-header nav a:first-child { border-top: none; }
+  .site-header nav a::after { display: none; }
+  .site-header nav a.active { color: var(--color-signal); }
   .hero { padding: 72px 0 56px; }
   .site-footer .wrap { flex-direction: column; gap: 8px; }
   .footer-links a { margin-left: 0; margin-right: 16px; }
