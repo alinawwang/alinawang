@@ -1,9 +1,16 @@
 - title: "Evaluating Data Sources for the Corcoran Clay Confining Unit"
+  detail_url: "/research/corcoran-clay/"
   org: "Department of Geophysics, Stanford Doerr School of Sustainability"
   role: "Research Assistant"
   period: "June 2026 – September 2026"
-  advisors: "Prof. Rosemary J. Knight & Ph.D. Candidate Jonathan Mells"
+  advisors:
+    - name: "Prof. Rosemary J. Knight"
+      url: "https://sustainability.stanford.edu/people/rosemary-knight"
+    - name: "Ph.D. Candidate Jonathan Mells"
+      url: "https://gemcenter.stanford.edu/people/jonathan-mells"
   description: >
+    Conducted through Stanford's <a href="https://gemcenter.stanford.edu/" target="_blank" rel="noopener">GEM Center</a>
+    within the <a href="https://enviro.stanford.edu/" target="_blank" rel="noopener">Environmental Geophysics Group</a>.
     Georeferenced and spatially digitized historical USGS geologic
     plates in ArcGIS Pro into control-point-registered vector layers.
     Built a spatial well-log database by geoprocessing USGS subsurface
@@ -12,25 +19,14 @@
     electromagnetic (AEM) survey data against legacy well-log records
     for aquifer characterization in California's Central Valley.
   tags: [GIS, geospatial data, data fusion]
-  links:
-    - label: "Rosemary Knight (Doerr School)"
-      url: "https://sustainability.stanford.edu/people/rosemary-knight"
-    - label: "Rosemary Knight (Profile)"
-      url: "https://profiles.stanford.edu/rosemary-knight?releaseVersion=11.5.3"
-    - label: "Environmental Geophysics Group"
-      url: "https://enviro.stanford.edu/"
-    - label: "GEM Center"
-      url: "https://gemcenter.stanford.edu/"
-    - label: "Jonathan Mells (GEM Center)"
-      url: "https://gemcenter.stanford.edu/people/jonathan-mells"
-    - label: "Jonathan Mells (Profile)"
-      url: "https://profiles.stanford.edu/jonathan-mells"
 
 - title: "AI-Powered Literature Review Pipeline"
   org: "SPARK Lab (Stanford Project on Adaptation and Resilience in Kids)"
   role: "Research Assistant"
   period: "June 2026 – August 2026"
-  advisors: "Prof. Jelena Obradović & Postdoctoral Scholar Meriah L. DeJoseph"
+  advisors:
+    - name: "Prof. Jelena Obradović"
+    - name: "Postdoctoral Scholar Meriah L. DeJoseph"
   description: >
     Designed a multi-stage AI pipeline to automate literature review
     based on domain expertise, cutting manual screening time for

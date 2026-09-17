@@ -209,10 +209,12 @@ section .lede {
   margin: 0;
 }
 .entry .meta {
+  display: block;
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--color-ink-soft);
   white-space: nowrap;
+  margin-bottom: 8px;
 }
 .entry .org {
   font-size: 14px;
@@ -231,6 +233,60 @@ section .lede {
   font-size: 12px;
   color: var(--color-ink-soft);
   margin: 0 0 8px;
+}
+.entry .advisors a,
+.entry p.desc a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-line);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.entry .advisors a:hover,
+.entry p.desc a:hover {
+  color: var(--color-signal);
+  border-color: var(--color-signal);
+}
+.entry h3 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.entry h3 a:hover {
+  color: var(--color-signal);
+  border-color: var(--color-signal);
+}
+
+/* research detail sub-page */
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.back-link:hover {
+  color: var(--color-signal);
+  border-color: var(--color-signal);
+}
+.detail-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--color-ink);
+  margin: 0 0 10px;
+  max-width: var(--measure);
+}
+.detail-heading {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--color-signal);
+  margin: 36px 0 12px;
 }
 .entry p.desc {
   margin: 8px 0 10px;
@@ -274,18 +330,6 @@ section .lede {
   border: 1px solid var(--color-line);
   padding: 3px 8px;
   border-radius: 2px;
-}
-.links-row { margin-top: 10px; }
-.tag-link {
-  color: var(--color-signal);
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-.tag-link:hover {
-  background: var(--color-signal);
-  color: #fff;
-  border-color: var(--color-signal);
 }
 
 /* skills */

@@ -9,20 +9,22 @@ title: Research
     {% for r in site.data.research %}
     <div class="entry">
       <div class="entry-head">
-        <h3>{{ r.title }}</h3>
+        <h3>
+          {% if r.detail_url %}<a href="{{ r.detail_url | relative_url }}">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}
+        </h3>
         <span class="meta">{{ r.period }}</span>
       </div>
       <p class="org">{{ r.role }} · {{ r.org }}</p>
-      {% if r.advisors %}<p class="advisors">Advisors: {{ r.advisors }}</p>{% endif %}
+      {% if r.advisors %}
+      <p class="advisors">
+        Advisors:
+        {% for a in r.advisors %}{% if a.url %}<a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% unless forloop.last %} &amp; {% endunless %}{% endfor %}
+      </p>
+      {% endif %}
       <p class="desc">{{ r.description }}</p>
       <div class="tags">
         {% for t in r.tags %}<span class="tag">{{ t }}</span>{% endfor %}
       </div>
-      {% if r.links %}
-      <div class="tags links-row">
-        {% for l in r.links %}<a class="tag tag-link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}
-      </div>
-      {% endif %}
     </div>
     {% endfor %}
   </div>
