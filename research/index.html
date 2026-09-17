@@ -18,6 +18,11 @@ title: Research
       <div class="tags">
         {% for t in r.tags %}<span class="tag">{{ t }}</span>{% endfor %}
       </div>
+      {% if r.links %}
+      <div class="tags links-row">
+        {% for l in r.links %}<a class="tag tag-link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>

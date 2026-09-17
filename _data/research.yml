@@ -1,15 +1,3 @@
-- title: "AI-Powered Literature Review Pipeline"
-  org: "SPARK Lab (Stanford Project on Adaptation and Resilience in Kids)"
-  role: "Research Assistant"
-  period: "June 2026 – August 2026"
-  advisors: "Prof. Jelena Obradović & Postdoctoral Scholar Meriah L. DeJoseph"
-  description: >
-    Designed a multi-stage AI pipeline to automate literature review
-    based on domain expertise, cutting manual screening time for
-    research staff. Evaluated an AI Skill-based architecture for
-    long-term maintainability through text-based specification edits.
-  tags: [NLP, LLM pipelines, research tooling]
-
 - title: "Evaluating Data Sources for the Corcoran Clay Confining Unit"
   org: "Department of Geophysics, Stanford Doerr School of Sustainability"
   role: "Research Assistant"
@@ -24,3 +12,28 @@
     electromagnetic (AEM) survey data against legacy well-log records
     for aquifer characterization in California's Central Valley.
   tags: [GIS, geospatial data, data fusion]
+  links:
+    - label: "Rosemary Knight (Doerr School)"
+      url: "https://sustainability.stanford.edu/people/rosemary-knight"
+    - label: "Rosemary Knight (Profile)"
+      url: "https://profiles.stanford.edu/rosemary-knight?releaseVersion=11.5.3"
+    - label: "Environmental Geophysics Group"
+      url: "https://enviro.stanford.edu/"
+    - label: "GEM Center"
+      url: "https://gemcenter.stanford.edu/"
+    - label: "Jonathan Mells (GEM Center)"
+      url: "https://gemcenter.stanford.edu/people/jonathan-mells"
+    - label: "Jonathan Mells (Profile)"
+      url: "https://profiles.stanford.edu/jonathan-mells"
+
+- title: "AI-Powered Literature Review Pipeline"
+  org: "SPARK Lab (Stanford Project on Adaptation and Resilience in Kids)"
+  role: "Research Assistant"
+  period: "June 2026 – August 2026"
+  advisors: "Prof. Jelena Obradović & Postdoctoral Scholar Meriah L. DeJoseph"
+  description: >
+    Designed a multi-stage AI pipeline to automate literature review
+    based on domain expertise, cutting manual screening time for
+    research staff. Evaluated an AI Skill-based architecture for
+    long-term maintainability through text-based specification edits.
+  tags: [NLP, LLM pipelines, research tooling]
