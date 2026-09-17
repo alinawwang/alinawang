@@ -7,13 +7,11 @@ without touching HTML.
 
 ## Pages
 
-- `/` — `index.html` (hero + About blurb)
+- `/` — `index.html` (hero with contact info + About blurb)
 - `/education/` — `education/index.html`
 - `/research/` — `research/index.html`
-- `/projects/` — `projects/index.html`
 - `/skills/` — `skills/index.html`
 - `/leadership/` — `leadership/index.html`
-- `/contact/` — `contact/index.html`
 
 Each page pulls its list content from the matching `_data/*.yml` file,
 so adding a new research entry, project, or role means editing the
