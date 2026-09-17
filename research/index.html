@@ -1,0 +1,24 @@
+---
+layout: default
+title: Research
+---
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research</h2>
+    {% for r in site.data.research %}
+    <div class="entry">
+      <div class="entry-head">
+        <h3>{{ r.title }}</h3>
+        <span class="meta">{{ r.period }}</span>
+      </div>
+      <p class="org">{{ r.role }} — {{ r.org }}</p>
+      {% if r.advisors %}<p class="advisors">Advisors: {{ r.advisors }}</p>{% endif %}
+      <p class="desc">{{ r.description }}</p>
+      <div class="tags">
+        {% for t in r.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

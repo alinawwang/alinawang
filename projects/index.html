@@ -1,0 +1,23 @@
+---
+layout: default
+title: Projects
+---
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    {% for p in site.data.projects %}
+    <div class="entry">
+      <div class="entry-head">
+        <h3>
+          {% if p.link and p.link != "" %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        </h3>
+      </div>
+      <p class="desc">{{ p.description }}</p>
+      <div class="tags">
+        {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
