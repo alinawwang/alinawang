@@ -1,0 +1,205 @@
+---
+---
+:root {
+  --color-blueprint: #1B3A5C;
+  --color-paper: #F4F2ED;
+  --color-ink: #14213D;
+  --color-ink-soft: #57606f;
+  --color-line: #D8D4C8;
+  --color-signal: #E8622C;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: 'IBM Plex Serif', Georgia, serif;
+  --measure: 640px;
+}
+
+* { box-sizing: border-box; }
+html { }
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+a { color: var(--color-signal); }
+
+/* header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-paper);
+  border-bottom: 1px dashed var(--color-line);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.wordmark {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.site-header nav {
+  display: flex;
+  gap: 22px;
+}
+.site-header nav a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+}
+.site-header nav a:hover { color: var(--color-signal); }
+.site-header nav a.active { color: var(--color-ink); font-weight: 600; }
+
+/* hero */
+.hero {
+  background: var(--color-blueprint);
+  color: #EDEEF0;
+  padding: 96px 0 72px;
+}
+.hero h1 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+.hero p.tagline {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  color: rgba(237, 238, 240, 0.82);
+  max-width: var(--measure);
+  margin: 0;
+}
+.hero .coords {
+  display: inline-block;
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(237, 238, 240, 0.25);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(237, 238, 240, 0.5);
+}
+
+/* sections */
+section {
+  padding: 64px 0;
+  border-bottom: 1px dashed var(--color-line);
+}
+section:last-of-type { border-bottom: none; }
+section h2 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-signal);
+  margin: 0 0 28px;
+}
+section .lede {
+  max-width: var(--measure);
+  color: var(--color-ink-soft);
+}
+
+/* entries (research / projects / leadership) */
+.entry {
+  padding: 20px 0;
+  border-top: 1px solid var(--color-line);
+}
+.entry:first-of-type { border-top: none; }
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.entry h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+.entry .meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+.entry .org {
+  font-size: 14px;
+  color: var(--color-ink-soft);
+  margin: 2px 0 8px;
+}
+.entry .advisors {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-ink-soft);
+  margin: 0 0 8px;
+}
+.entry p.desc {
+  margin: 8px 0 10px;
+  max-width: var(--measure);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+/* skills */
+.skill-group { margin-bottom: 18px; }
+.skill-group h4 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  margin: 0 0 8px;
+}
+
+/* footer */
+.site-footer { padding: 32px 0 56px; }
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-ink-soft);
+}
+.footer-links a {
+  margin-left: 16px;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+}
+.footer-links a:hover { color: var(--color-signal); }
+
+@media (max-width: 640px) {
+  .site-header nav { gap: 14px; }
+  .site-header nav a { font-size: 12px; }
+  .hero { padding: 72px 0 56px; }
+  .site-footer .wrap { flex-direction: column; gap: 8px; }
+  .footer-links a { margin-left: 0; margin-right: 16px; }
+}

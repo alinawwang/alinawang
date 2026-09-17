@@ -1,0 +1,22 @@
+---
+layout: default
+title: Education
+---
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    {% for e in site.data.education %}
+    <div class="entry">
+      <div class="entry-head">
+        <h3>{{ e.school }}</h3>
+        <span class="meta">{{ e.period }}</span>
+      </div>
+      <p class="org">{{ e.degree }} — {{ e.program }}</p>
+      {% if e.coursework %}
+      <p class="desc">Relevant coursework: {{ e.coursework | join: ", " }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
