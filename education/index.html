@@ -12,7 +12,11 @@ title: Education
         <h3>{{ e.school }}</h3>
         <span class="meta">{{ e.period }}</span>
       </div>
-      <p class="org">{{ e.degree }} · {{ e.program }}</p>
+      <p class="org">
+        {% if e.degree_url %}<a href="{{ e.degree_url }}" target="_blank" rel="noopener">{{ e.degree }}</a>{% else %}{{ e.degree }}{% endif %}
+        ·
+        {% if e.program_url %}<a href="{{ e.program_url }}" target="_blank" rel="noopener">{{ e.program }}</a>{% else %}{{ e.program }}{% endif %}
+      </p>
       {% if e.coursework %}
       <p class="desc">Relevant coursework: {{ e.coursework | join: ", " }}</p>
       {% endif %}

@@ -1,6 +1,8 @@
 - school: "University of California, Los Angeles (UCLA)"
   program: "Henry Samueli School of Engineering and Applied Science"
+  program_url: "https://samueli.ucla.edu/"
   degree: "B.S. in Computer Science"
+  degree_url: "https://catalog.registrar.ucla.edu/major/2025/computersciencebs?siteYear=2025"
   period: "Expected June 2028"
   coursework:
     - "Logic Design of Digital Systems"

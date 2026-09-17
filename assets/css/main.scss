@@ -219,6 +219,13 @@ section .lede {
   color: var(--color-ink-soft);
   margin: 2px 0 8px;
 }
+.entry .org a {
+  color: var(--color-signal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.entry .org a:hover { border-color: var(--color-signal); }
 .entry .advisors {
   font-family: var(--font-mono);
   font-size: 12px;
