@@ -6,14 +6,20 @@ title: Leadership
 <section id="leadership">
   <div class="wrap">
     <h2>Leadership &amp; Outreach</h2>
-    {% for l in site.data.leadership %}
+    {% for o in site.data.leadership %}
     <div class="entry">
       <div class="entry-head">
-        <h3>{{ l.org }}</h3>
-        {% if l.period %}<span class="meta">{{ l.period }}</span>{% endif %}
+        <h3>{{ o.org }}</h3>
       </div>
-      <p class="org">{{ l.role }}</p>
-      <p class="desc">{{ l.description }}</p>
+      {% for r in o.roles %}
+      <div class="role">
+        <div class="role-head">
+          <span class="role-title">{{ r.role }}</span>
+          {% if r.period %}<span class="meta">{{ r.period }}</span>{% endif %}
+        </div>
+        <p class="desc">{{ r.description }}</p>
+      </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>

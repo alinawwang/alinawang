@@ -32,6 +32,11 @@ body {
 
 a { color: var(--color-signal); }
 
+.email-obfuscated {
+  font-family: var(--font-mono);
+  color: var(--color-ink);
+}
+
 /* header */
 .site-header {
   position: sticky;
@@ -154,6 +159,31 @@ section .lede {
 .entry p.desc {
   margin: 8px 0 10px;
   max-width: var(--measure);
+}
+
+/* leadership: multiple roles under one org */
+.role {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-line);
+}
+.role:first-of-type {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
+}
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.role-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-ink);
 }
 .tags {
   display: flex;
