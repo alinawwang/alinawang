@@ -26,8 +26,11 @@
   period: "June 2026 – August 2026"
   advisors:
     - name: "Prof. Jelena Obradović"
+      url: "https://sparklab.stanford.edu/people/jelena-obradovic"
     - name: "Postdoctoral Scholar Meriah L. DeJoseph"
+      url: "https://www.meriahdejoseph.com/"
   description: >
+    Conducted through Stanford's <a href="https://sparklab.stanford.edu/" target="_blank" rel="noopener">SPARK Lab</a>.
     Designed a multi-stage AI pipeline to automate literature review
     based on domain expertise, cutting manual screening time for
     research staff. Evaluated an AI Skill-based architecture for
